@@ -1,11 +1,18 @@
 #!/bin/bash
 
-echo "Version: ${1}"
+account="bhawk123"
+repository="identidock"
+
+echo "Account: ${account} Repository: ${repository} Version: ${1}"
 
 echo "Building image"
-docker build -t bhawk123/identidock:${1} .
+docker build -t ${account}/${repository}:${1} .
+
+echo "Tagging image"
+docker tag "identidock" "${account}/${repository}:${1}"
 
 echo "Pushing image to Docker"
-docker push bhawk123/identidock:${1}
+docker push "${account}/${repository}:${1}"
+
 
 echo "DONE"
