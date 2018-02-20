@@ -8,7 +8,7 @@ class TestCases(unittest.TestCase):
         self.app = identidock.app.test_client()
 
     def test_get_mainpage(self):
-        url = "http://ec2-34-214-190-217.us-west-2.compute.amazonaws.com:5000"
+        url = "/"
         print("URL: ",url)
         page = self.app.post(url, data=dict(name="Moby Dock"))
         print("Page Status Code: ", page.status_code)
