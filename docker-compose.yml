@@ -10,8 +10,10 @@ indentidock-v1:
   - dnmonster
   - redis
 
+
 dnmonster:
   image: amouat/dnmonster:1.0
+
 
 redis:
   image: redis:3.0
