@@ -9,7 +9,6 @@ class TestCase(unittest.TestCase):
 
     def test_get_mainpage(self):
         page = self.app.post("/", data=dict(name="Joni"))
-        print("Page Status Code: ", page.status_code)
         assert page.status_code == 200
         assert 'Hello' in str(page.data)
         assert 'Joni' in str(page.data)
