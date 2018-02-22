@@ -8,9 +8,7 @@ class TestCases(unittest.TestCase):
         self.app = identidock.app.test_client()
 
     def test_get_mainpage(self):
-        url = "/"
-        print("URL: ",url)
-        page = self.app.post(url, data=dict(name="Moby Dock"))
+        page = self.app.post("/", data=dict(name="Moby Dock"))
         print("Page Status Code: ", page.status_code)
         assert page.status_code == 200
         assert 'Hello' in str(page.data)
