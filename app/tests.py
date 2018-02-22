@@ -1,7 +1,7 @@
 import unittest
 import identidock
 
-class TestCases(unittest.TestCase):
+class TestCase(unittest.TestCase):
 
     def setUp(self):
         identidock.app.config["TESTING"] = True
