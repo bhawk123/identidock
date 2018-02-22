@@ -8,11 +8,11 @@ class TestCases(unittest.TestCase):
         self.app = identidock.app.test_client()
 
     def test_get_mainpage(self):
-        page = self.app.post("/", data=dict(name="Moby Dock"))
+        page = self.app.post("/", data=dict(name="Joni"))
         print("Page Status Code: ", page.status_code)
         assert page.status_code == 200
         assert 'Hello' in str(page.data)
-        assert 'Moby Dock' in str(page.data)
+        assert 'Joni' in str(page.data)
 
     def test_html_escaping(self):
         page = self.app.post("/", data=dict(name='"><b>TEST</b><!--'))
@@ -20,4 +20,3 @@ class TestCases(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
