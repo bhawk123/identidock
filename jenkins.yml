@@ -1,5 +1,4 @@
 identidock:
-  image: bhawk123/identidock:newest
   build: .
   expose: 
    - "9090"
@@ -14,5 +13,3 @@ dnmonster:
 
 redis:
   image: redis:3.0
-
-
