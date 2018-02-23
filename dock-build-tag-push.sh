@@ -11,12 +11,12 @@ if [[ $# -eq 0 ]] ; then
 fi
 
 echo "Building image"
-docker build -t ${account}/${repository}:${1} .
+docker build --no-cache -t ${account}/${repository}:${1} .
 
 echo "Tagging image"
 docker tag "identidock" "${account}/${repository}:${1}"
 
-echo "Pushing image to Docker"
-docker push "${account}/${repository}:${1}"
+echo "NOT Pushing image to Docker"
+# docker push "${account}/${repository}:${1}"
 
 echo "DONE"

@@ -1,4 +1,5 @@
 identidock:
+  image: bhawk123/identidock:newest
   build: .
   expose: 
    - "9090"
